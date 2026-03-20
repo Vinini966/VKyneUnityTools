@@ -1,4 +1,4 @@
-# Unity Tools Library (DLL)
+# VKyne Unity Tools Library (DLL)
 
 A modular collection of reusable Unity utilities packaged as a compiled DLL for easy integration across projects.
 
