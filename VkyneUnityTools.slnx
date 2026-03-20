@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="VkyneUnityTools/VkyneUnityTools.csproj" />
+  <Project Path="VkyneUnityToolsEditor/VkyneUnityToolsEditor.csproj" Id="37f9ad0b-cec8-4705-b270-0a7160ff679a" />
+</Solution>
