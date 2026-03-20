@@ -1,109 +1,133 @@
-VKyne Unity Tools Library (DLL)
+# Unity Tools Library (DLL)
 
 A modular collection of reusable Unity utilities packaged as a compiled DLL for easy integration across projects.
 
-🚀 Overview
+---
+
+## 🚀 Overview
 
 This library contains a set of custom-built tools designed to streamline common development tasks in Unity projects. It is distributed as a DLL to:
 
-Protect internal implementation details
+* Protect internal implementation details
+* Reduce project clutter
+* Enable easy reuse across multiple projects
+* Improve compile times in large Unity projects
 
-Reduce project clutter
+---
 
-Enable easy reuse across multiple projects
+## 🧰 Features
 
-Improve compile times in large Unity projects
+* 🔌 Plug-and-play DLL integration
+* ⚡ Lightweight and dependency-conscious
+* 🧱 Modular architecture (use only what you need)
+* 🛠️ Built for real production workflows
+* 🔄 Designed for reuse across multiple Unity projects
 
-🧰 Features
+---
 
-🔌 Plug-and-play DLL integration
+## 📦 Included Systems
 
-⚡ Lightweight and dependency-conscious
+> *(Customize this section based on what you actually include)*
 
-🧱 Modular architecture (use only what you need)
+* **Grid / Solver Utilities**
+  Constraint-based grid solving and scoring systems
 
-🛠️ Built for real production workflows
+* **Input Helpers**
+  Simplified wrappers for Unity’s input handling
 
-🔄 Designed for reuse across multiple Unity projects
+* **Math & Utility Functions**
+  Common calculations and helper methods
 
-📦 Included Systems
+* **Data Structures**
+  Optimized collections and helpers for game logic
 
-Input Helpers
-Simplified wrappers for Unity’s input handling
+* **Debug Tools**
+  Logging, validation, and runtime inspection helpers
 
-Math & Utility Functions
-Common calculations and helper methods
+---
 
-Data Structures
-Optimized collections and helpers for game logic
+## 📥 Installation
 
-Debug Tools
-Logging, validation, and runtime inspection helpers
+1. Copy the `.dll` file into your Unity project:
 
-📥 Installation
-
-Copy the .dll file into your Unity project:
-
+```
 Assets/Plugins/
+```
 
-(Optional) Add accompanying .xml documentation file for IntelliSense support
+2. (Optional) Add accompanying `.xml` documentation file for IntelliSense support
 
-Unity will automatically recognize and compile the assembly
+3. Unity will automatically recognize and compile the assembly
 
-🧪 Example Usage
+---
 
+## 🧪 Example Usage
 
+```csharp
+using MyTools;
 
-⚙️ Requirements
+public class Example : MonoBehaviour
+{
+    void Start()
+    {
+        var result = GridSolver.Solve(...);
+        Debug.Log(result);
+    }
+}
+```
 
-Unity 2020+
+---
 
-.NET Standard 2.0
+## ⚙️ Requirements
 
-🧠 Design Philosophy
+* Unity 2020+ (or your target version)
+* .NET Standard 2.0 / 2.1 (match your build target)
+
+---
+
+## 🧠 Design Philosophy
 
 This library was built with a focus on:
 
-Reusability – Write once, use everywhere
+* **Reusability** – Write once, use everywhere
+* **Encapsulation** – Hide complexity behind clean APIs
+* **Performance** – Avoid unnecessary allocations and overhead
+* **Flexibility** – Systems are extensible via interfaces
 
-Encapsulation – Hide complexity behind clean APIs
+---
 
-Performance – Avoid unnecessary allocations and overhead
-
-Flexibility – Systems are extensible via interfaces
-
-🔒 Why a DLL?
+## 🔒 Why a DLL?
 
 Using a DLL instead of raw scripts provides:
 
-Cleaner project structure
+* Cleaner project structure
+* Faster iteration in large projects
+* Protection of internal logic
+* Easier versioning and distribution
 
-Faster iteration in large projects
+---
 
-Protection of internal logic
+## ⚠️ Notes
 
-Easier versioning and distribution
+* This is a **generalized version** of internal tools adapted for public use
+* Some systems may be simplified to remove project-specific dependencies
 
-⚠️ Notes
+---
 
-This is a generalized version of internal tools adapted for public use
+## 🔮 Future Improvements
 
-Some systems may be simplified to remove project-specific dependencies
+* Expanded documentation
+* Example scenes
+* Editor tooling support
+* Additional utility modules
 
-🔮 Future Improvements
+---
 
-Expanded documentation
-
-Example scenes
-
-Editor tooling support
-
-Additional utility modules
-
-👤 Author
+## 👤 Author
 
 Vincent Kyne
 
-📄 License
+---
+
+## 📄 License
 
 MIT License (or specify your license)
