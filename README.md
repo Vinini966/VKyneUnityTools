@@ -27,22 +27,17 @@ This library contains a set of custom-built tools designed to streamline common 
 
 ## 📦 Included Systems
 
-> *(Customize this section based on what you actually include)*
-
-* **Grid / Solver Utilities**
-  Constraint-based grid solving and scoring systems
-
 * **Input Helpers**
   Simplified wrappers for Unity’s input handling
 
-* **Math & Utility Functions**
-  Common calculations and helper methods
+* **Utility Functions**
+  Helper extensions and commonly used features
 
 * **Data Structures**
   Optimized collections and helpers for game logic
 
 * **Debug Tools**
-  Logging, validation, and runtime inspection helpers
+  Runtime inspection helpers
 
 ---
 
@@ -54,33 +49,18 @@ This library contains a set of custom-built tools designed to streamline common 
 Assets/Plugins/
 ```
 
-2. (Optional) Add accompanying `.xml` documentation file for IntelliSense support
-
-3. Unity will automatically recognize and compile the assembly
+2. Unity will automatically recognize and compile the assembly
 
 ---
 
 ## 🧪 Example Usage
 
-```csharp
-using MyTools;
-
-public class Example : MonoBehaviour
-{
-    void Start()
-    {
-        var result = GridSolver.Solve(...);
-        Debug.Log(result);
-    }
-}
-```
-
----
+TBA
 
 ## ⚙️ Requirements
 
-* Unity 2020+ (or your target version)
-* .NET Standard 2.0 / 2.1 (match your build target)
+* Unity 2020+
+* .NET Standard 2.0
 
 ---
 
