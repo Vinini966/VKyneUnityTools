@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
-using VkyneTools.Utility.Helpers;
+using VkyneTools.Abstract.Utility.Helpers;
 
-namespace VkyneTools.Utility
+namespace VkyneTools.Abstract.Utility
 {
-    public class PoolManager : MonoBehaviour
+    public abstract class PoolManager<T> : MonoBehaviour where T : PoolManagerItem
     {
         public int MaxItems = 6;
 
         public GameObject Prefab;
 
-        public Queue<PoolManagerItem> Pool;
+        public Queue<T> Pool;
 
         public bool AllowOverflowDynamic;
 
@@ -24,7 +24,7 @@ namespace VkyneTools.Utility
         // Start is called before the first frame update
         void Start()
         {
-            Pool = new Queue<PoolManagerItem>();
+            Pool = new Queue<T>();
 
             //creates initial item
             CreateNewItem();
@@ -65,7 +65,7 @@ namespace VkyneTools.Utility
             {
                 PoolManagerItem PoolManagerItem = item.GetComponent<PoolManagerItem>();
 
-                if (PoolManagerItem != null && PoolManagerItem.Pool != this)
+                if (PoolManagerItem != null && PoolManagerItem.Pool != (object)this)
                 {
                     Debug.LogWarning($"Item {item.name} does not belong to this pool.");
                     return;
@@ -105,7 +105,7 @@ namespace VkyneTools.Utility
             GameObject newObject = Instantiate(Prefab, transform);
             newObject.name = Prefab.name + _totalItems.ToString();
 
-            PoolManagerItem item = newObject.AddComponent<PoolManagerItem>();
+            PoolManagerItem item = newObject.AddComponent<T>();
             item.Pool = this;
 
             CheckInItem(item);
@@ -118,7 +118,7 @@ namespace VkyneTools.Utility
         {
 
             PoolManagerItem.gameObject.transform.position = StorageLocation;
-            Pool.Enqueue(PoolManagerItem);
+            Pool.Enqueue((T)PoolManagerItem);
             PoolManagerItem.CurrentStatus = PoolManagerItem.Status.CHECKED_IN;
         }
     }
